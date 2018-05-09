@@ -6,6 +6,7 @@ const db = {
 }
 db.User = db.sequelize.import('../models/user.js')
 db.List = db.sequelize.import('../models/list.js')
+db.Train = db.sequelize.import('../models/train.js')
 db.sequelize.authenticate().then(function() {
     console.log("数据库连接成功");
 }).catch(function(err) {

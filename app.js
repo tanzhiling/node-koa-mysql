@@ -9,7 +9,7 @@ app.use(cors())
 const isProduction = process.env.NODE_ENV === 'production';
 sql.sequelize.sync({
     force: false
-}).then(() => {
+}).then(res => {
     console.log("serve success");
 }).catch(err => {
     console.log("Server failed to start due to error: %s", err);

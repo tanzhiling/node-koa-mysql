@@ -34,6 +34,9 @@ module.exports = function (sequelize, DataTypes) {
         bank: {
             type: DataTypes.STRING
         },
+        balance: {
+            type: DataTypes.INTEGER
+        },
         avatar: {
             type: DataTypes.STRING
         },

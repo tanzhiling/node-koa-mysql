@@ -1,8 +1,11 @@
 'use strict'
 module.exports = function (sequelize, DataTypes) {
     var List = sequelize.define('list', {
-        user_id: {
-            type: DataTypes.INTEGER
+        nickname: {
+            type: DataTypes.STRING
+        },
+        station_train_code: {
+            type: DataTypes.STRING
         },
         from_city: {
             type: DataTypes.STRING
@@ -10,14 +13,17 @@ module.exports = function (sequelize, DataTypes) {
         to_city: {
             type: DataTypes.STRING
         },
-        order_id: {
+        seat: {
             type: DataTypes.STRING
+        },
+        price: {
+            type: DataTypes.INTEGER
         },
         order_num: {
             type: DataTypes.STRING
         },
         create_time: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         }
     }, {
         timestamps: false, //取消默认生成的createdAt、updatedAt字段
